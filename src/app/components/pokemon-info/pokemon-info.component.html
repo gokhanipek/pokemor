@@ -1,0 +1,27 @@
+<div class="page-header">
+  <h1 id="containers">{{pokemon[0].name}}</h1>
+</div>
+
+<div>
+  <ul class="pagination pagination-sm">
+    <li class="page-item">
+      <a class="page-link" [routerLink]= "['/pokemon', (pokemon[0].id-1)]"> Previous &laquo;</a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" [routerLink]= "['/pokemon', (pokemon[0].id+1)]"> Next &raquo;</a>
+    </li>
+  </ul>
+</div>
+
+<div class="row">
+  <div class="col-md-3">
+    <div class="card border-light mb-3" style="max-width: 20rem;">
+      <div class="card-header text-center white-color">{{pokemon[0].name}}</div>
+      <div class="card-body">
+          <img class="img-responsive" src="../../../assets/img/{{pokemon[0].id}}.png" alt="">
+      </div>
+      <div class="card-footer text-center white-color">{{pokemon[0].types}}</div>
+    </div>
+  </div>
+
+</div>
